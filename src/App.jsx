@@ -1,7 +1,8 @@
 import {useState, useEffect} from 'react'
 import TodoInput  from "./components/Todoinput"
 import TodoList from "./components/TodoList"
-import { json } from 'express'
+
+
 
 function App() {
 
@@ -9,9 +10,10 @@ function App() {
   const [todoValue, setTodosValue]= useState('')
 
   function persistData(newList){
-    localStorage.setItem('todos', json.stringify({ todos: newList}))
+    localStorage.setItem('todos', JSON.stringify({ todos: newList}))
   }
   function handleAddTodos(newTodo){
+    if(!newTodo.trim())return
     const newTodoList = [...todos, newTodo]
     persistData(newTodoList)
     setTodos(newTodoList)
@@ -41,7 +43,7 @@ function App() {
     console.log(localTodo)
     localTodo = JSON.parse(localTodo).todos
     setTodos(localTodo)
-  })
+  }, [])
   return (
     <>
 <TodoInput todoValue={todoValue} setTodoValue = {setTodosValue}

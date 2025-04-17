@@ -1,3 +1,5 @@
+
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -39,4 +41,52 @@
 
 .read-the-docs {
   color: #888;
+}
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* ...your existing styles... */
+
+.read-the-docs {
+  color: #888;
+}
+
+/* ✅ Add this at the very end 👇 */
+.todoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.todoItem {
+  background-color: #f1f1f1;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actionContainer {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.actionContainer button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.actionContainer button:hover {
+  color: #000; /* Default to black or choose another valid color */
 }

@@ -5,7 +5,7 @@ export default function TodoList(props) {
  const {todos} = props
   
   return (
-    <ul>
+    <ul className = "todoList">
       {todos.map((todo, todoIndex)=>{
         return(
         <TodoCard {...props} key ={todoIndex}index=
